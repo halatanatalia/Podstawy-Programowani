@@ -12,9 +12,7 @@ void print(int num) {
 void print(double num) {
     std::cout << num;
 }
-void print(ulamek ulamek) {
-    std::cout << ulamek.l << "/" << ulamek.m;
-}
+
 void print(ulamek&ulamek) {
     std::cout << ulamek.l << "/" << ulamek.m;
 }
