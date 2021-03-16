@@ -108,5 +108,53 @@ int main()
     return 0;
 }
 
-/*
+/* zad.2
+#include <iostream>
+#include <cstring>
+
+class Tekst
+{
+    const char *String;
+    int size;
+    
+    public: 
+    Tekst(){String = new char[0]; size = 0;}
+    Tekst(const char *nTekst);
+    ~Tekst(){delete[] String;};
+    
+    void setNewTekst(const char *noTekst);
+    int getSize()const;
+    
+};
+
+Tekst::Tekst(const char *nTekst)
+{
+    size = strlen(nTekst);
+    delete[] String;
+    String = new char[size + 1];
+    strncpy((char*)String,nTekst, size+1);
+}
+
+void Tekst::setNewTekst(const char *noTekst)
+{
+    size = strlen(noTekst);
+    delete[] String;
+    String = new char[size + 1];
+    strncpy((char*)String,noTekst, size+1);
+}
+
+int Tekst::getSize()const
+{
+    return size;
+}
+
+int main()
+{
+
+
+    return 0;
+}
+
+*/
+
 
